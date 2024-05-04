@@ -70,10 +70,12 @@ class MainActivity : AppCompatActivity() {
 
         if (answer.text.toString() == ans) {
             correctAns++
+            answer.setTextColor(Color.WHITE)
             answer.setBackgroundColor(Color.GREEN)
         }
         else {
             incorrectAns++
+            answer.setTextColor(Color.WHITE)
             answer.setBackgroundColor(Color.RED)
         }
         correct.text = correctAns.toString()
@@ -87,6 +89,8 @@ class MainActivity : AppCompatActivity() {
         check.isEnabled = true
         answer.isEnabled = true
         answer.setBackgroundColor(Color.TRANSPARENT)
+        answer.setTextColor(Color.BLACK)
+        answer.text =""
 
         makeNewExpr()
     }
